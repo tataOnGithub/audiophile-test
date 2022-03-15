@@ -1,0 +1,91 @@
+.headphones-speakers-earphones-container {
+    display: grid;
+    grid-template-rows: 336px 1fr 284px 633px 365px;
+    gap: 160px;
+
+    @include media-tablet {
+        grid-template-rows: 336px 1fr 217px 633px 400px;
+        gap: 160px;
+    }
+
+    @include media-mobile {
+        grid-template-rows: 192px 1fr 683px 698px 654px;
+        gap: 160px;
+    }
+}
+
+.header-background {
+    background-color: $nav-color;
+    height: 239px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-mobile {
+        height: 102px;
+    }
+
+    h2 {
+        color: $color-light;
+    }
+}
+
+main.main-products-categories {
+    max-width: 1110px;
+    @include center (column);
+    gap: 160px;
+    margin: auto;
+
+    @include media-mobile {
+        gap: 120px;
+    }
+
+    .product-section-category {
+        @include center;
+        gap: 125px;
+
+        @include media-tablet {
+            @include center (column);
+            gap: 52px;
+        }
+
+        picture {
+            img {
+                max-width: 540px;
+                height: 560px;
+
+                @include media-tablet {
+                    max-width: 689px;
+                    height: 352px;
+                }
+
+                @include media-mobile {
+                    max-width: 327px;
+                    height: 352px;
+                }
+            }
+        }
+
+        .product-section-category-text {
+            p.overline {
+                color: $primary;
+            }
+
+            p.p-text {
+                @include media-tablet {
+                    text-align: center;
+                }
+            }
+
+            h2 {
+                @include media-tablet {
+                    text-align: center;
+                }
+
+                @include media-mobile {
+                    @include heading-styles (2.8rem, 3.8rem, 0.1rem);
+                }
+            }
+        }
+    }
+}

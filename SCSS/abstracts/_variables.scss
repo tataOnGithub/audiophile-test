@@ -1,0 +1,27 @@
+// colors
+$color-orange: #D87D4A;
+$color-black: #101010;
+$color-orange-light: #FBAF85;
+$color-gray: #F1F1F1;
+$color-light-gray: #FAFAFA;
+$color-light: #FFFFFF;
+$color-dark: #000000;
+$nav-color: lighten($color: $color-black, $amount: 3%);
+
+$primary: $color-orange;
+$primary-light: $color-orange-light;
+$secondary: $color-black;
+
+$themes: (
+    'primary': $primary,
+    'secondary': $secondary
+)
+
+//font sizes
+// $font-size-lg: 
+// $font-size-md: 
+// $font-size-sm: 
+
+// $font-family:
+// $font-weight-normal:
+// $font-weight-bold: 

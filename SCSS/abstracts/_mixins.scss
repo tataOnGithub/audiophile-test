@@ -1,0 +1,58 @@
+@mixin button-variant ($background, $color, $border, $hover-background, $hover-color) {
+    color: $color;
+    background: $background;
+
+    &:hover {
+        background: $hover-background;
+        color: $hover-color;
+    }
+}
+
+// @mixin font-styles ($family, $size, $weight, $line-height, $style, $text-align) {
+//     font-family: $family;
+//     font-size: $size;
+//     font-weight: $weight;
+//     font-stretch: normal;
+//     font-style: $style;
+//     line-height: $line-height;
+//     letter-spacing: normal;
+//     text-align: $text-align;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
+
+@mixin media-tablet {
+    @media only screen and (max-width: 768px) {
+        @content;                 
+    }
+}
+
+@mixin media-mobile {
+    @media only screen and (max-width: 375px) {
+        @content;                 
+    }
+}
+
+@mixin heading-styles ($font-size, $line-height, $letter-spacing) {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin center ($direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin flex ($align, $justify, $direction: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
